@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
-import {Seo, Header, Footer, MainContent} from "../components";
+import { Seo, Header, Footer, MainContent } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gray-200 h-screen">
+    <div className="flex flex-col h-screen bg-gray-200">
       <Seo title="Home" />
 
       <Header />
 
-      <MainContent>
-        
+      <MainContent className="flex items-center justify-center flex-1">
+        <h1 className="text-2xl font-bold uppercase">Site em construção...</h1>
       </MainContent>
 
       <Footer />

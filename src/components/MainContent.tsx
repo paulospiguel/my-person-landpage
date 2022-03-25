@@ -1,7 +1,10 @@
 import React from "react";
+import { BaseProps } from "../types";
 
-const MainContent: React.FC = ({ children }) => {
-  return <section>{children}</section>;
+interface MainContentProps extends BaseProps {}
+
+const MainContent: React.FC<MainContentProps> = ({ children, ...props }) => {
+  return <section {...props}>{children}</section>;
 };
 
 export default MainContent;
