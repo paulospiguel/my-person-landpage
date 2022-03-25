@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import classnames from "classnames";
+import NavMenu from "./NavMenu";
 
 export default function Footer() {
   return (
@@ -21,15 +23,28 @@ export default function Footer() {
           <span className="text-gray-600">Software Engineer</span>
         </div>
       </div>
-      <nav className="flex gap-2">
-        <a href="#" className="text-gray-600">
-          Minha História
-        </a>
+      <NavMenu>
+        <NavMenu.Link className="uppercase" href="#">Home</NavMenu.Link>
 
-        <a href="#" className="text-gray-600">
-          Minha carreira
+        <NavMenu.Link className="uppercase" href="#">Minha História</NavMenu.Link>
+
+        <NavMenu.Link className="uppercase" href="#">Minha Carreira</NavMenu.Link>
+
+        <NavMenu.Link className="uppercase" href="#">Blog</NavMenu.Link>
+
+        <NavMenu.Link className="uppercase" href="#">Contacto</NavMenu.Link>
+
+        <a
+          href="#"
+          className={classnames(
+            "text-indigo-500 uppercase border-2 border-indigo-500",
+            "px-1.5 py-0.5 font-semibold",
+            "hover:bg-indigo-500 hover:text-white"
+          )}
+        >
+          contrate-me
         </a>
-      </nav>
+      </NavMenu>
     </header>
   );
 }

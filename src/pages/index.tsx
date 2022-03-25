@@ -3,7 +3,7 @@ import { Seo, Header, Footer, MainContent } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col h-screen bg-gray-200">
+    <div className="flex flex-col h-screen bg-gray-200 font-poppins">
       <Seo title="Home" />
 
       <Header />

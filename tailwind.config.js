@@ -4,7 +4,13 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      Poppins: ["Poppins", "sans-serif"],
+      BebasNeue: ["Bebas Neue", "cursive"],
+      DeltaGO: ["Dela Gothic One", "cursive"],
+      IndieFlores: ["Indie Flower", "cursive"],
+    },
     extend: {},
   },
   plugins: [],
-}
+};
