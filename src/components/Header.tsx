@@ -37,9 +37,9 @@ export default function Footer() {
         <a
           href="#"
           className={classnames(
-            "text-indigo-500 uppercase border-2 border-indigo-500",
+            "text-slate-800 uppercase border-2 border-slate-800",
             "px-1.5 py-0.5 font-semibold",
-            "hover:bg-indigo-500 hover:text-white"
+            "hover:bg-slate-800 hover:text-white"
           )}
         >
           contrate-me

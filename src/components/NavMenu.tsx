@@ -9,7 +9,7 @@ flex gap-5 items-center font-IndieFlores
 `;
 
 const ItemLink = styled.a`
-  ${tw`border-b-2 hover:(text-black border-indigo-500)`}
+  ${tw`border-b-2 hover:(text-black border-gray-800)`}
 `;
 
 function NavMenu({ children, ...props }: NavMenuProps) {
