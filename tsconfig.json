@@ -23,6 +23,7 @@
       "@/utils/*": ["utils/*"]
     }
   },
+  "files": ["twin.d.ts"],
   "include": [
     "next-env.d.ts",
     "twin.d.ts",

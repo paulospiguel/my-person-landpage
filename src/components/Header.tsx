@@ -24,15 +24,25 @@ export default function Footer() {
         </div>
       </div>
       <NavMenu>
-        <NavMenu.Link className="uppercase" href="#">Home</NavMenu.Link>
+        <NavMenu.Link className="uppercase" href="#">
+          Home
+        </NavMenu.Link>
 
-        <NavMenu.Link className="uppercase" href="#">Minha História</NavMenu.Link>
+        <NavMenu.Link className="uppercase" href="#">
+          Minha História
+        </NavMenu.Link>
 
-        <NavMenu.Link className="uppercase" href="#">Minha Carreira</NavMenu.Link>
+        <NavMenu.Link className="uppercase" href="#">
+          Minha Carreira
+        </NavMenu.Link>
 
-        <NavMenu.Link className="uppercase" href="#">Blog</NavMenu.Link>
+        <NavMenu.Link className="uppercase" href="#">
+          Blog
+        </NavMenu.Link>
 
-        <NavMenu.Link className="uppercase" href="#">Contacto</NavMenu.Link>
+        <NavMenu.Link className="uppercase" href="#">
+          Contacto
+        </NavMenu.Link>
 
         <a
           href="#"
