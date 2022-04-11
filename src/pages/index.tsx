@@ -29,17 +29,18 @@ const Home: NextPage = () => {
     >
       <Seo title="Home" />
 
-      <Header />
+      <Header className="fixed top-0 w-full z-50"/>
 
       <SectionContent
         style={{ height: "9.7%" }}
         className="flex justify-center flex-1"
       >
-        <Sticky className="third">
-          <h1 className="mt-4 text-2xl font-bold uppercase">
-            Site em construção...
-          </h1>
-        </Sticky>
+        <Sticky
+          className="third bg-no-repeat bg-center bg-cover"
+          style={{
+            backgroundImage: "url('/assets/capaPauloSpil.png')",
+          }}
+        />
       </SectionContent>
 
       <SectionContent
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
         className="flex justify-center flex-1"
       >
         <Sticky className="fourth">
-          <h1 className="mt-4 text-2xl font-bold uppercase">
+          <h1 className="mt-20 text-2xl font-bold uppercase">
             Site em construção...
           </h1>
         </Sticky>

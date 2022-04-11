@@ -2,10 +2,42 @@ import React from "react";
 import Image from "next/image";
 import classnames from "classnames";
 import NavMenu from "./NavMenu";
+import { BaseProps } from "@/types";
 
-export default function Footer() {
+interface FooterProps extends BaseProps {}
+
+
+const optionsMenu = [
+  {
+    title: "home",
+    url: "#"
+  },
+  {
+    title: "minha história",
+    url: "#"
+  },
+  {
+    title: "minha carreira",
+    url: "#"
+  },
+  {
+    title: "blog",
+    url: "#"
+  },
+  {
+    title: "Contacto",
+    url: "#"
+  }
+]
+
+export default function Header(props: FooterProps) {
   return (
-    <header className="flex items-center justify-between w-full h-24 px-3 bg-transparent">
+    <header
+      className={classnames(
+        "flex items-center justify-between w-full h-24 px-3 bg-transparent",
+        props.className
+      )}
+    >
       <div className="flex items-center space-x-2">
         <Image
           width="50px"
@@ -23,33 +55,20 @@ export default function Footer() {
           <span className="text-gray-600">Software Engineer</span>
         </div>
       </div>
-      <NavMenu>
-        <NavMenu.Link className="uppercase" href="#">
-          Home
-        </NavMenu.Link>
 
-        <NavMenu.Link className="uppercase" href="#">
-          Minha História
-        </NavMenu.Link>
-
-        <NavMenu.Link className="uppercase" href="#">
-          Minha Carreira
-        </NavMenu.Link>
-
-        <NavMenu.Link className="uppercase" href="#">
-          Blog
-        </NavMenu.Link>
-
-        <NavMenu.Link className="uppercase" href="#">
-          Contacto
-        </NavMenu.Link>
+      <NavMenu className="text-brand-green uppercase">
+        {optionsMenu.map((el) => (
+          <NavMenu.Link key={el.title} className="hover:border-brand-green pb-2 hover:pb-1.5 hover:border-b-2" href={el?.url}>
+            {el.title}
+          </NavMenu.Link>
+        ))}
 
         <a
           href="#"
           className={classnames(
-            "text-slate-800 uppercase border-2 border-slate-800",
+            "text-brand-green uppercase border-2 border-brand-green",
             "px-1.5 py-0.5 font-semibold",
-            "hover:bg-slate-800 hover:text-white"
+            "hover:bg-brand-green hover:text-white"
           )}
         >
           contrate-me

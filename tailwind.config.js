@@ -10,7 +10,11 @@ module.exports = {
       DeltaGO: ["Dela Gothic One", "cursive"],
       IndieFlores: ["Indie Flower", "cursive"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "brand-green": "#c9e265"
+      },
+    },
   },
   plugins: [],
 };
