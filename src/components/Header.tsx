@@ -9,19 +9,19 @@ interface FooterProps extends BaseProps {}
 
 const optionsMenu = [
   {
-    title: "home",
+    title: "Home",
     url: "#"
   },
   {
-    title: "minha história",
+    title: "Minha história",
     url: "#"
   },
   {
-    title: "minha carreira",
+    title: "Autoralidade",
     url: "#"
   },
   {
-    title: "blog",
+    title: "Blog",
     url: "#"
   },
   {
