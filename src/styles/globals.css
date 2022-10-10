@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  body, html {
+  body,
+  html,
+  #_next {
     font-family: Poppins, system-ui, sans-serif;
+    height: 100vh;
+  }
+
+  body {
+    overflow: hidden;
   }
 }

@@ -4,29 +4,29 @@ import classnames from "classnames";
 import NavMenu from "./NavMenu";
 import { BaseProps } from "@/types";
 
-interface FooterProps extends BaseProps {}
+interface FooterProps extends BaseProps { }
 
 
 const optionsMenu = [
   {
     title: "Home",
-    url: "#"
+    url: "#home"
   },
   {
     title: "Minha história",
-    url: "#"
+    url: "#about"
   },
   {
-    title: "Autoralidade",
-    url: "#"
+    title: "Portfolio",
+    url: "#portfolio"
   },
   {
     title: "Blog",
-    url: "#"
+    url: "#blog"
   },
   {
     title: "Contacto",
-    url: "#"
+    url: "#contact"
   }
 ]
 
@@ -52,11 +52,11 @@ export default function Header(props: FooterProps) {
           <span className="font-extrabold text-gray-800 uppercase">
             Paulo Spiguel
           </span>
-          <span className="text-gray-600">Software Engineer</span>
+          <span className="text-gray-600">Software Developer</span>
         </div>
       </div>
 
-      <NavMenu className="text-brand-green uppercase">
+      <NavMenu className="uppercase text-brand-green">
         {optionsMenu.map((el) => (
           <NavMenu.Link key={el.title} className="hover:border-brand-green pb-2 hover:pb-1.5 hover:border-b-2" href={el?.url}>
             {el.title}

@@ -23,20 +23,23 @@ const insideStyles: CSSProperties = {
 
 const Home: NextPage = () => {
   return (
-    <div
-      style={{ height: "1610vh" }}
-      className="flex flex-col h-screen bg-gray-200 font-poppins"
+    <main
+      className="w-full h-full overflow-scroll scroll-smooth snap-y snap-mandatory" //flex flex-col bg-gray-200 font-poppins
     >
       <Seo title="Home" />
 
-      <Header className="fixed top-0 w-full z-50"/>
+      <Header className="fixed top-0 z-50 w-full" />
+
+      {/* <section id="home" className="w-full h-screen bg-green-500 snap-center">Teste 1</section>
+      <section id="about" className="w-full h-screen bg-red-500 snap-center">Teste 2</section>
+      <section id="portfolio" className="w-full h-screen bg-gray-500 snap-center">Teste 3</section>
+      <section id="contact" className="w-full h-screen snap-center bg-amber-500-500">Teste 4</section> */}
 
       <SectionContent
-        style={{ height: "9.7%" }}
-        className="flex justify-center flex-1"
+        id="home"
       >
         <Sticky
-          className="third bg-no-repeat bg-center bg-cover"
+          className="bg-center bg-no-repeat bg-cover third"
           style={{
             backgroundImage: "url('/assets/capaPauloSpil.png')",
           }}
@@ -44,16 +47,25 @@ const Home: NextPage = () => {
       </SectionContent>
 
       <SectionContent
-        style={{ height: "10.1%" }}
-        className="flex justify-center flex-1"
+        id="about"
       >
         <Sticky className="fourth">
           <h1 className="mt-20 text-2xl font-bold uppercase">
-            Site em construção...
+            Sobre mim
           </h1>
         </Sticky>
       </SectionContent>
 
+      <SectionContent
+        id="portfolio"
+      >
+        <Sticky className="fourth">
+          <h1 className="mt-20 text-2xl font-bold uppercase">
+            Meus trabalhos
+          </h1>
+        </Sticky>
+      </SectionContent>
+      {/* 
       <Parallax
         bgImage={image4}
         strength={200}
@@ -77,10 +89,12 @@ const Home: NextPage = () => {
         <div style={{ height: 500 }}>
           <div style={insideStyles}>renderProp</div>
         </div>
-      </Parallax>
+      </Parallax> */}
 
-      <Footer />
-    </div>
+      <SectionContent id="contact">
+        <Footer />
+      </SectionContent>
+    </main>
   );
 };
 

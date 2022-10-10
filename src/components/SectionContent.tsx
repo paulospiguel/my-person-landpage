@@ -4,7 +4,7 @@ import tw, { styled } from "twin.macro";
 import { BaseProps } from "../types";
 
 const Section = styled.section`
-  ${tw`relative`}
+  ${tw`relative flex justify-center flex-1 w-full h-screen bg-gray-200`}
 
   .first {
     background-color: "";
@@ -27,13 +27,13 @@ const Section = styled.section`
   }
 `;
 
-interface SectionContentProps extends BaseProps {}
+interface SectionContentProps extends BaseProps { }
 
 const SectionContent: React.FC<SectionContentProps> = ({
   children,
   ...props
 }) => {
-  return <Section {...props}>{children}</Section>;
+  return <Section className={`${props.className} snap-center`} {...props}>{children}</Section>;
 };
 
 export default SectionContent;
