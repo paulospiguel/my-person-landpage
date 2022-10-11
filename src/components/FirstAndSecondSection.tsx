@@ -1,8 +1,11 @@
 import Sticky from "./Sticky";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import tw, { css } from "twin.macro";
 
-const FirstAndSecondSection: React.FC = ({ children }) => {
+interface FirstAndSecondSectionProps {
+  children: React.ReactNode
+}
+
+const FirstAndSecondSection = ({ children }: FirstAndSecondSectionProps) => {
   const { scrollYProgress } = useViewportScroll();
   const frameOpacity = useTransform(scrollYProgress, [0.196, 0.198], [0, 1]);
   const frameScale = useTransform(

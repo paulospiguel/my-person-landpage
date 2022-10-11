@@ -1,6 +1,10 @@
 import React from "react";
 
-const Layout: React.FC = ({ children }) => {
+interface LayoutPros {
+  children: React.ReactNode
+}
+
+const Layout = ({ children }: LayoutPros) => {
   return <main className="w-full h-full overflow-scroll">{children}</main>;
 };
 
