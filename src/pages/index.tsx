@@ -1,3 +1,4 @@
+import { useGetPersonalInfoQuery } from "@/graphql/generated";
 import type { NextPage } from "next";
 import { CSSProperties } from "react";
 import { Parallax } from "react-parallax";
@@ -22,6 +23,9 @@ const insideStyles: CSSProperties = {
 };
 
 const Home: NextPage = () => {
+
+  const { loading, data } = useGetPersonalInfoQuery();
+
   return (
     <main
       className="w-full h-full overflow-scroll scroll-smooth snap-y snap-mandatory" //flex flex-col bg-gray-200 font-poppins
@@ -29,11 +33,6 @@ const Home: NextPage = () => {
       <Seo title="Home" />
 
       <Header className="fixed top-0 z-50 w-full" />
-
-      {/* <section id="home" className="w-full h-screen bg-green-500 snap-center">Teste 1</section>
-      <section id="about" className="w-full h-screen bg-red-500 snap-center">Teste 2</section>
-      <section id="portfolio" className="w-full h-screen bg-gray-500 snap-center">Teste 3</section>
-      <section id="contact" className="w-full h-screen snap-center bg-amber-500-500">Teste 4</section> */}
 
       <SectionContent
         id="home"
@@ -50,7 +49,7 @@ const Home: NextPage = () => {
         id="about"
       >
         <Sticky className="fourth">
-          <h1 className="mt-20 text-2xl font-bold uppercase">
+          <h1 className="mt-20 text-3xl font-bold uppercase text-center">
             Sobre mim
           </h1>
         </Sticky>
@@ -60,7 +59,7 @@ const Home: NextPage = () => {
         id="portfolio"
       >
         <Sticky className="fourth">
-          <h1 className="mt-20 text-2xl font-bold uppercase">
+          <h1 className="mt-20 text-3xl font-bold uppercase text-center">
             Meus trabalhos
           </h1>
         </Sticky>

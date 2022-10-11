@@ -2,10 +2,10 @@ import { BaseProps, AnchorBaseProps } from "@/types";
 import React from "react";
 import tw, { styled } from "twin.macro";
 
-interface NavMenuProps extends BaseProps {}
+interface NavMenuProps extends BaseProps { }
 
 const Nav = tw.nav`
-flex gap-5 items-center font-IndieFlores
+  gap-5 items-center font-IndieFlores hidden sm:flex
 `;
 
 const ItemLink = styled.a`

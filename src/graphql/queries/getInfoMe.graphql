@@ -1,0 +1,24 @@
+query GetPersonalInfo {
+  personalInfos(first: 1) {
+    id
+    displayName
+    bio
+    birthday
+    email
+    hardSkills
+    occupation
+    nationality
+    location
+    socialMedia {
+      ... on SocialMedia {
+        id
+        name
+        url
+      }
+    }
+    summary {
+      html
+      text
+    }
+  }
+}
